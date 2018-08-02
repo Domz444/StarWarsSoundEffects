@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dom Sound Test</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="keys">
+        <div data-key="65">
+            <kbd>A</kbd>
+            <span class="sound">I am your Father</span>
+        </div>
+        <div data-key="83">
+            <kbd>S</kbd>
+            <span class="sound">Chewy</span>
+        </div>
+        <div data-key="68">
+            <kbd>D</kbd>
+            <span class="sound">The Dark Side</span>
+        </div>
+        <div data-key="70">
+            <kbd>F</kbd>
+            <span class="sound">Do or Do not</span>
+        </div>
+        <div data-key="71">
+            <kbd>G</kbd>
+            <span class="sound">Dont Underestimate</span>
+        </div>
+        <div data-key="72">
+            <kbd>H</kbd>
+            <span class="sound">Han Solo</span>
+        </div>
+        <div data-key="74">
+            <kbd>J</kbd>
+            <span class="sound">Light Saber</span>
+        </div>
+        <div data-key="75">
+            <kbd>K</kbd>
+            <span class="sound">R2-D2</span>
+        </div>
+        <div data-key="76">
+            <kbd>L</kbd>
+            <span class="sound">The Force</span>
+        </div>
+    </div>
+
+    <audio data-key="65" src="sounds/your_father.wav"></audio>
+    <audio data-key="83" src="sounds/chewy.wav"></audio>
+    <audio data-key="68" src="sounds/dark_side2_y.wav"></audio>
+    <audio data-key="70" src="sounds/do_or_do_not.wav"></audio>
+    <audio data-key="71" src="sounds/dont_underestimate.wav"></audio>
+    <audio data-key="72" src="sounds/han_solo.wav"></audio>
+    <audio data-key="74" src="sounds/light_saber.wav"></audio>
+    <audio data-key="75" src="sounds/r2-d2.wav"></audio>
+    <audio data-key="76" src="sounds/the_force.wav"></audio>
+<!-- 
+    <script>
+        function playSound(e) {
+            const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+            const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+
+            if (!audio) return; //stop the function
+            audio.currentTime = 0; //Rewind the audio
+            audio.play();
+            key.classList.add("playing"); // add css class for different styling
+        }
+
+        function removeTransition(e) {
+            if (e.propertyName !== "transform") return;
+            this.classList.remove("playing");
+        }
+
+        const keys = document.querySelectorAll(".key");
+        keys.forEach(key => key.addEventListener("transitionend", removeTransition));
+
+        window.addEventListener("keydown", playSound);
+    </script> -->
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
